@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+
 
 df = pd.DataFrame(
     {
@@ -9,11 +11,11 @@ df = pd.DataFrame(
     index=["falcon", "dog", "spider", "fish"],
 )
 print(df)
+print(df.loc["dog", "num_legs"])  # Accessing multiple rows by index labels
 
-import numpy as np
 
-mu, sigma = 500, 100  # mean and standard deviation
-s = np.random.normal(mu, sigma, 1000)
+mu, sigma = 0, 1  # mean and standard deviation
+s = np.random.normal(mu, sigma, 10)
 print(np.max(s))
 
 
